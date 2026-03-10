@@ -39,8 +39,13 @@ After this practice you should be able to
 1. (Optional): Use the provided `environment.yml` file to update your environment.
    - Note: This requires you to have the `environment.yml` file in your current working directory.
       - Here is a quick guide on how to navigate directories within the _Terminal_: [Linux Command - Shell Tutorial](https://linuxcommand.org/lc3_lts0020.php).
-         - This is a bit too much information, but _Windows Powershell_ which is running in the windows _Terminal_ and _bash_ which is running on Mac and Linux are two flavours of different kinds of interactive command interpreters (also known as [Command Line Interface](https://en.wikipedia.org/wiki/Command-line_interface). They differ in how commands are written but have sufficient overlap in the basics, that it won't matter for us.
-
+         - This is a bit too much information, but _Windows Powershell_ which is running in the windows _Terminal_ and _bash_ which is running on Mac and Linux are two flavours of different kinds of interactive command interpreters (also known as [Command Line Interface](https://en.wikipedia.org/wiki/Command-line_interface)). They differ in how commands are written but have sufficient overlap in the basics, that it won't matter for us.
+   1. If you try to update the environment, _conda_ will be thinking for a while and try to find a combination of packages without conflicts in their dependencies. **This might fail!**
+   1. If it fails, you can try to update the environment using the `environment_installed_packages.yml`. This environment file contains a list of the packages that I directly installed without all their dependencies. This means it will take longer to update and you won't have exactly the same versions for each module, but it should work.
+   1. If that also fails, you can manually install all the packages listed in the `environment_installed_packages.yml`. You can install multiple packages together. For example the command below will install `numpy` and `pandas`: 
+      ```
+      conda install numpy pandas
+      ```
 
 ## Learning Checklist
 
